@@ -43,3 +43,22 @@ const swiper = new Swiper('.slider-wrapper', {
         }
     }
 });
+const form = document.getElementById("contact-form");
+
+if (form) {
+    form.addEventListener("submit", function () {
+
+        // ✅ EmailJS runs separately (does not block form)
+        emailjs.sendForm(
+            "service_4uv0lxf",
+            "template_kv7v0do",
+            this
+        ).then(() => {
+            console.log("Email sent");
+        }).catch((error) => {
+            console.log("EmailJS error:", error);
+        });
+
+        // ❗ No preventDefault → Formspree will work automatically
+    });
+}
