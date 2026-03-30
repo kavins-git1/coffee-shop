@@ -240,7 +240,7 @@
                                 <p>www.kavinsweb.com</p>
                             </li>
                         </ul>
-                        <form action="https://formspree.io/f/xqegppka" method="POST" class="contact-form">
+                        <form action="https://formspree.io/f/xqegppka" method="POST" class="contact-form" id="contact-form">
                             <input type="text" name="name" placeholder="Your Name" class="form-input" required>
                             <input type="email" name="email" placeholder="Your Email" class="form-input" required>
                             <textarea placeholder="Your message" name="message" class="form-input" required></textarea>
@@ -278,6 +278,11 @@
                 
            </footer>
     </main>
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+
+<script>
+emailjs.init("YOUR_PUBLIC_KEY");
+</script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
     <script src="script.js"></script>
 </body>
